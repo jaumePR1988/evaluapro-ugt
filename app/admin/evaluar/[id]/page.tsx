@@ -1,6 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+
+// Forzar renderizado dinámico para evitar 404 en Vercel
+export const dynamic = 'force-dynamic'
 import { useParams, useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import type { Request, EvaluationFactor, GroupLimit } from '@/lib/supabase'

@@ -1,6 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+
+// Forzar renderizado dinámico para evitar 404 en Vercel
+export const dynamic = 'force-dynamic'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
