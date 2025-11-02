@@ -1,0 +1,56 @@
+diff --git a/app/admin/configuracion/page.tsx b/app/admin/configuracion/page.tsx
+index f113f30..31fedf1 100644
+--- a/app/admin/configuracion/page.tsx
++++ b/app/admin/configuracion/page.tsx
+@@ -1,6 +1,9 @@
+ 'use client'
+ 
+ import { useState, useEffect } from 'react'
++
++// Forzar renderizado dinámico para evitar 404 en Vercel
++export const dynamic = 'force-dynamic'
+ import Link from 'next/link'
+ import { useRouter } from 'next/navigation'
+ import { supabase } from '@/lib/supabase'
+diff --git a/app/admin/dashboard/page.tsx b/app/admin/dashboard/page.tsx
+index 0c5f1f9..5e220ba 100644
+--- a/app/admin/dashboard/page.tsx
++++ b/app/admin/dashboard/page.tsx
+@@ -1,6 +1,9 @@
+ 'use client'
+ 
+ import { useState, useEffect } from 'react'
++
++// Forzar renderizado dinámico para evitar 404 en Vercel
++export const dynamic = 'force-dynamic'
+ import Link from 'next/link'
+ import { useRouter } from 'next/navigation'
+ import { supabase } from '@/lib/supabase'
+diff --git a/app/admin/evaluar/[id]/page.tsx b/app/admin/evaluar/[id]/page.tsx
+index de4438a..3398f5f 100644
+--- a/app/admin/evaluar/[id]/page.tsx
++++ b/app/admin/evaluar/[id]/page.tsx
+@@ -1,6 +1,9 @@
+ 'use client'
+ 
+ import { useState, useEffect } from 'react'
++
++// Forzar renderizado dinámico para evitar 404 en Vercel
++export const dynamic = 'force-dynamic'
+ import { useParams, useRouter } from 'next/navigation'
+ import { supabase } from '@/lib/supabase'
+ import type { Request, EvaluationFactor, GroupLimit } from '@/lib/supabase'
+diff --git a/app/login/page.tsx b/app/login/page.tsx
+index 2ff32d1..f368f6d 100644
+--- a/app/login/page.tsx
++++ b/app/login/page.tsx
+@@ -1,6 +1,9 @@
+ 'use client'
+ 
+ import { useState } from 'react'
++
++// Forzar renderizado dinámico para evitar 404 en Vercel
++export const dynamic = 'force-dynamic'
+ import { useRouter } from 'next/navigation'
+ import Link from 'next/link'
+ import Image from 'next/image'
